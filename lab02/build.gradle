@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+ext {
+javaMainClass1 = 'csci2020u.lab02.CSVDemo'
+javaMainClass2 = 'csci2020u.lab02.SimpleTest'
+}
+
+application {
+
+  mainClassName = javaMainClass2
+}
+
+respositories {
+
+  jcenter()
+  mavenCentral1()
+}
+
+dependencies {
+
+  compile 'org.s1f4j:s1f4j-api:1.7.21'
+
+  testCompile 'junit:junit:4.12'
+
+  implementation 'org.apache.commons:commons-csv:1.7'
+}
